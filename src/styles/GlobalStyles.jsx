@@ -103,6 +103,25 @@ const globalStyles = css`
     white-space: nowrap;
     border: 0;
   }
+
+  section h2 {
+    position: relative;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 45%;
+    width: 10%;
+    height: 4px;
+    background: ${theme.colors.accent};
+    border-radius: 4px;
+  }
+
 `;
 
 export const GlobalStyles = () => <Global styles={globalStyles} />;

@@ -11,6 +11,8 @@ export const theme = {
       background: 'rgba(255, 255, 255, 0.05)',
       border: 'transparent',
       card: 'rgba(42, 45, 62, 0.2)',
+      shadow: 'rgba(0, 0, 0, 0.3)',
+      light: 'rgba(255, 255, 255, 0.1)',
     },
     gradient: {
       main: 'linear-gradient(135deg, #2A2D3E 0%, #454964 50%, #2A2D3E 100%)',

@@ -27,22 +27,34 @@ const Links = styled.div`
 `
 
 const ContactLink = styled.a`
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: ${({ theme }) => theme.colors.textLight};
+  background: ${({ theme }) => theme.colors.glass.light};
+  padding: 0.75rem 1.2rem;
+  border-radius: 2rem;
   text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, background 0.3s ease;
 
   &:hover {
     color: ${({ theme }) => theme.colors.accent};
+    transform: translateY(-4px);
+    box-shadow: 0 0 12px ${({ theme }) => theme.colors.accent};
   }
 
   svg {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
   }
-`
+
+  &:hover svg {
+    transform: scale(1.15);
+  }
+`;
+
 
 const Contact = () => {
   return (

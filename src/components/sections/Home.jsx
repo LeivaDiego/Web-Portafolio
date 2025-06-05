@@ -14,13 +14,13 @@ const Section = styled.section`
 `
 
 const Card = styled(motion.div)`
-  background: ${({ theme }) => theme.colors.glass.card};
+  background: ${({ theme }) => theme.colors.glass.background};
   padding: 2rem;
   border-radius: 1.5rem;
   max-width: 700px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 24px ${({ theme }) => theme.colors.glass.shadow};
   backdrop-filter: blur(12px);
 
   @media (max-width: 480px) {

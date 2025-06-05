@@ -26,18 +26,16 @@ const Container = styled.div`
 `
 
 const Card = styled(motion.div)`
-  background: ${({ theme }) => theme.colors.glass.card};
+  background: ${({ theme }) => theme.colors.glass.background};
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 20px ${({ theme }) => theme.colors.glass.shadow};
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    transform: translateY(-6px) scale(1.02);
     box-shadow: 0 0 16px ${({ theme }) => theme.colors.accent};
   }
 `
-
 
 const Preview = styled.img`
   width: 100%;
@@ -69,11 +67,18 @@ const Tags = styled.div`
 
 const Tag = styled.span`
   background: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.accent};
   padding: 0.3rem 0.6rem;
   border-radius: 0.5rem;
   font-size: 0.75rem;
   font-weight: 500;
+
+  &:hover {
+    transform: translateY(-6px) scale(1.02);
+    transition: transform 0.2s ease;
+    background: ${({ theme }) => theme.colors.accent};
+    color: ${({ theme }) => theme.colors.textDark};
+  }
 `
 
 const IconGroup = styled.div`
@@ -84,7 +89,7 @@ const IconGroup = styled.div`
 
   a {
     color: ${({ theme }) => theme.colors.text};
-    transition: color 0.3s;
+    transition: color 0.5s;
 
     &:hover {
       color: ${({ theme }) => theme.colors.accent};
