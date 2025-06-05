@@ -2,6 +2,9 @@
 import styled from '@emotion/styled'
 import { motion } from 'framer-motion'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import bmoPreview from '../../assets/bmo-preview.png';
+import memoryPreview from '../../assets/memory-preview.png';
+import calcPreview from '../../assets/calc-preview.png';
 
 const Section = styled.section`
   padding: 4rem 2rem;
@@ -97,7 +100,7 @@ const projects = [
     description: 'Imagen de BMO usando solo CSS.',
     demo: 'https://bmo-css.web.app',
     repo: 'https://github.com/LeivaDiego/Web-Lab4.git',
-    image: 'src/assets/bmo-preview.png',
+    image:  bmoPreview,
     technologies: ['HTML', 'CSS'],
   },
   {
@@ -105,7 +108,7 @@ const projects = [
     description: 'Juego de memoria de Kaijus hecho con React y animaciones.',
     demo: 'https://kaiju-memory.web.app',
     repo: 'https://github.com/LeivaDiego/Web-Lab6-React.git',
-    image: 'src/assets/memory-preview.png',
+    image:  memoryPreview,
     technologies: ['React', 'JavaScript', 'CSS'],
   },
   {
@@ -113,7 +116,7 @@ const projects = [
     description: 'Calculadora interactiva hecha con React + hooks personalizados.',
     demo: 'https://react-calculator-lite.web.app',
     repo: 'https://github.com/LeivaDiego/Web-Calculator.git',
-    image: 'src/assets/calc-preview.png',
+    image:  calcPreview,
     technologies: ['React', 'JavaScript'],
   },
 ]

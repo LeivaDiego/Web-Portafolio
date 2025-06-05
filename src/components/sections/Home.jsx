@@ -85,23 +85,26 @@ const Home = () => {
 
   useEffect(() => {
     let index = 0
-    
+    let isMounted = true
+
     const typeNextChar = () => {
+      if (!isMounted) return
+      setTypedText(fullText.slice(0, index + 1))
+      index++
       if (index < fullText.length) {
-        setTypedText((prev) => prev + fullText.charAt(index))
-        index++
         setTimeout(typeNextChar, 70)
       } else {
         setShowRest(true)
       }
     }
-    
+
     typeNextChar()
-    
+
     return () => {
-      index = fullText.length // por si desmonta
+      isMounted = false
     }
-  }, [])
+  }, [fullText])
+
 
 
   return (
