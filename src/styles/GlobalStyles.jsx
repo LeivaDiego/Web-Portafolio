@@ -2,7 +2,7 @@ import { Global, css } from '@emotion/react';
 import { theme } from './theme';
 
 const globalStyles = css`
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
   *, *::before, *::after {
     margin: 0;
@@ -73,7 +73,6 @@ const globalStyles = css`
     position: relative;
   }
 
-  /* Scrollbar y screen reader only */
   ::-webkit-scrollbar {
     width: 10px;
   }

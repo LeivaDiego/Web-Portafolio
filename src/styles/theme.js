@@ -23,8 +23,8 @@ export const theme = {
     }
   },
   fonts: {
-    body: "'Inter', sans-serif",
-    heading: "'Poppins', sans-serif",
+    body: "'Pixelify Sans', sans-serif",
+    heading: "'Pixelify Sans', sans-serif",
   },
   breakpoints: {
     sm: '640px',
