@@ -1,17 +1,15 @@
-import { ThemeProvider } from '@emotion/react';
-import { theme } from './styles/theme';
-import { GlobalStyles } from './styles/GlobalStyles';
+import { ThemeProvider } from '@emotion/react'
+import { theme } from './styles/theme'
+import { GlobalStyles } from './styles/GlobalStyles'
+import Layout from './components/layout/Layout'
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <div>
-        <h1>Hola, soy Diego</h1>
-        <p>Este es mi portafolio.</p>
-      </div>
+      <Layout />
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App
