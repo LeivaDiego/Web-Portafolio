@@ -1,4 +1,5 @@
 import { GlobalStyles } from '../../styles/GlobalStyles'
+import NavBar from '../navigation/NavBar'
 import Home from '../sections/Home'
 import Projects from '../sections/Projects'
 import Skills from '../sections/Skills'
@@ -8,6 +9,7 @@ const Layout = () => {
   return (
     <>
       <GlobalStyles />
+      <NavBar />
       <main>
         <Home />
         <Projects />
