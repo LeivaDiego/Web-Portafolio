@@ -1,6 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import styled from '@emotion/styled'
 import { motion } from 'framer-motion'
+import {
+  FaReact, FaJs, FaHtml5, FaCss3Alt,
+  FaNodeJs, FaPython, FaDocker, FaGit
+} from 'react-icons/fa'
+import { SiMongodb, SiPostgresql } from 'react-icons/si'
 
 const Section = styled.section`
   padding: 4rem 2rem;
@@ -41,8 +46,38 @@ const Skill = styled(motion.div)`
   border-radius: 0.5rem;
   font-weight: 500;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  transition: box-shadow 0.3s ease;
+
+  svg {
+    font-size: 1.1rem;
+    color: ${({ theme }) => theme.colors.accent};
+  }
+
+  &:hover {
+    box-shadow: 0 0 12px ${({ theme }) => theme.colors.accent};
+  }
 `
 
+
+// 🎯 Diccionario de íconos por tecnología
+const skillIcons = {
+  React: <FaReact />,
+  JavaScript: <FaJs />,
+  HTML: <FaHtml5 />,
+  CSS: <FaCss3Alt />,
+  'Node.js': <FaNodeJs />,
+  Python: <FaPython />,
+  MongoDB: <SiMongodb />,
+  PostgreSQL: <SiPostgresql />,
+  Docker: <FaDocker />,
+  Git: <FaGit />,
+}
+
+// 🧠 Estructura de skills por categoría
 const skillsData = {
   Frontend: ['React', 'JavaScript', 'HTML', 'CSS'],
   Backend: ['Node.js', 'Python', 'MongoDB', 'PostgreSQL'],
@@ -61,10 +96,10 @@ const Skills = () => {
               {skills.map((skill, i) => (
                 <Skill
                   key={i}
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05, rotate: 1 }}
                   transition={{ duration: 0.2 }}
                 >
-                  {skill}
+                  {skillIcons[skill]} {skill}
                 </Skill>
               ))}
             </SkillList>
