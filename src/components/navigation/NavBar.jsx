@@ -17,7 +17,7 @@ const FullNav = styled(motion.nav)`
   justify-content: space-between;
   align-items: center;
   z-index: 999;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px  ${({ theme }) => theme.colors.overlay.dark};
 
   @media (max-width: 768px) {
     display: none;
@@ -56,7 +56,7 @@ const CenteredNav = styled(motion.nav)`
   top: 1rem;
   left: 50%;
   transform: translateX(-50%);
-  background: ${({ theme }) => theme.colors.glass.card};
+  background: ${({ theme }) => theme.colors.glass.background};
   border: 1px solid ${({ theme }) => theme.colors.glass.border};
   border-radius: 2rem;
   padding: 0.5rem 2rem;
@@ -65,7 +65,7 @@ const CenteredNav = styled(motion.nav)`
   align-items: center;
   z-index: 999;
   backdrop-filter: blur(12px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px ${({ theme }) => theme.colors.overlay.dark};
 
   @media (max-width: 768px) {
     display: none;
@@ -98,7 +98,7 @@ const MobileStickyButton = styled.button`
   background: ${({ theme }) => theme.colors.primary};
   padding: 0.6rem;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px ${({ theme }) => theme.colors.overlay.dark};
   z-index: 999;
   font-size: 1.4rem;
   color: ${({ theme }) => theme.colors.accent};
@@ -117,7 +117,7 @@ const Overlay = styled(motion.div)`
   width: 70%;
   background: ${({ theme }) => theme.colors.primary};
   z-index: 1000;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: -2px 0 10px ${({ theme }) => theme.colors.overlay.dark};
   padding: 4.5rem 2rem 2rem; /* 🔧 Aumentamos el padding-top */
   display: flex;
   flex-direction: column;
@@ -151,7 +151,7 @@ const Backdrop = styled(motion.div)`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.3); /* puedes ajustar la opacidad si deseas */
+  background: ${({ theme }) => theme.colors.glass.background};
   z-index: 999;
 `
 

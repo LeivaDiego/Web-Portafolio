@@ -29,7 +29,7 @@ const Card = styled(motion.div)`
   background: ${({ theme }) => theme.colors.glass.background};
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 6px 20px ${({ theme }) => theme.colors.glass.shadow};
+  box-shadow: 0 6px 20px ${({ theme }) => theme.colors.overlay.dark};
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
@@ -88,7 +88,7 @@ const IconGroup = styled.div`
   font-size: 1.2rem;
 
   a {
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.textLight};
     transition: color 0.5s;
 
     &:hover {

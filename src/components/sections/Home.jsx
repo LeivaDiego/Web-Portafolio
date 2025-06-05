@@ -20,7 +20,7 @@ const Card = styled(motion.div)`
   max-width: 700px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 8px 24px ${({ theme }) => theme.colors.glass.shadow};
+  box-shadow: 0 8px 24px ${({ theme }) => theme.colors.overlay.dark};
   backdrop-filter: blur(12px);
 
   @media (max-width: 480px) {
@@ -71,7 +71,7 @@ const Icons = styled(motion.div)`
   margin-top: 1rem;
 
   a {
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.textLight};
     transition: color 0.3s ease;
 
     &:hover {

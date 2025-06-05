@@ -30,7 +30,7 @@ const Card = styled(motion.div)`
   background: ${({ theme }) => theme.colors.glass.background};
   border-radius: 1rem;
   padding: 2rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 20px ${({ theme }) => theme.colors.overlay.dark};
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
@@ -54,7 +54,7 @@ const SkillList = styled.div`
 
 const Skill = styled(motion.div)`
   background: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.textLight};
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   font-weight: 500;

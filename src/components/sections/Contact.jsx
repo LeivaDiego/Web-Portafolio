@@ -34,6 +34,7 @@ const ContactLink = styled.a`
   font-size: 1.05rem;
   color: ${({ theme }) => theme.colors.textLight};
   background: ${({ theme }) => theme.colors.glass.light};
+  box-shadow: 0 4px 12px ${({ theme }) => theme.colors.overlay.dark};
   padding: 0.75rem 1.2rem;
   border-radius: 2rem;
   text-decoration: none;

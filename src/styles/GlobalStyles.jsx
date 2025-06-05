@@ -9,6 +9,102 @@ const globalStyles = css`
     padding: 0;
     box-sizing: border-box;
   }
+  
+  /* === Fondo líquido === */
+  .liquid-gradient {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  /* === Estilos base para cada blob === */
+  .liquid-blob {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.5;
+    mix-blend-mode: screen;
+  }
+
+  /* === Blobs con posición y animación === */
+  .blob1 {
+    top: 10%;
+    left: 15%;
+    background: ${theme.colors.gradient.blobs[0]};
+    animation: floatBlobs 20s ease-in-out infinite alternate;
+  }
+
+  .blob2 {
+    top: 50%;
+    left: 60%;
+    background: ${theme.colors.gradient.blobs[1]};
+    animation: floatBlobs 20s ease-in-out infinite alternate;
+  }
+
+  .blob3 {
+    top: 70%;
+    left: 25%;
+    background: ${theme.colors.gradient.blobs[2]};
+    animation: floatBlobs 20s ease-in-out infinite alternate;
+  }
+
+  .blob4 {
+    top: 30%;
+    left: 75%;
+    background: ${theme.colors.gradient.blobs[3]};
+    animation: floatBlobs 20s ease-in-out infinite alternate;
+  }
+
+  .blob5 {
+    top: 80%;
+    left: 80%;
+    background: ${theme.colors.gradient.blobs[4]};
+    animation: floatBlobAlt 25s ease-in-out infinite alternate;
+  }
+
+  .blob6 {
+    top: 20%;
+    left: 5%;
+    background: ${theme.colors.gradient.blobs[5]};
+    animation: floatBlobAlt2 18s ease-in-out infinite alternate;
+  }
+
+  .blob7 {
+    top: 40%;
+    left: 45%;
+    background: ${theme.colors.gradient.blobs[6]};
+    animation: floatBlobAlt3 22s ease-in-out infinite alternate;
+  }
+
+  /* === Animaciones === */
+  @keyframes floatBlobs {
+    0%   { transform: translate(0, 0) scale(1); }
+    50%  { transform: translate(-20px, 30px) scale(1.5); }
+    100% { transform: translate(20px, -30px) scale(1); }
+  }
+
+  @keyframes floatBlobAlt {
+    0%   { transform: translate(0, 0) scale(1); }
+    50%  { transform: translate(40px, -20px) scale(1.15); }
+    100% { transform: translate(-30px, 30px) scale(1); }
+  }
+
+  @keyframes floatBlobAlt2 {
+    0%   { transform: translate(0, 0) scale(1); }
+    50%  { transform: translate(-50px, 20px) scale(1.05); }
+    100% { transform: translate(30px, -40px) scale(1); }
+  }
+
+  @keyframes floatBlobAlt3 {
+    0%   { transform: translate(0, 0) scale(1); }
+    50%  { transform: translate(20px, 20px) scale(1.2); }
+    100% { transform: translate(-40px, -30px) scale(1); }
+  }
+
+
 
   html {
     scroll-behavior: smooth;
@@ -19,7 +115,7 @@ const globalStyles = css`
 
   body {
     font-family: ${theme.fonts.body};
-    color: ${theme.colors.text};
+    color: ${theme.colors.textLight};
     background: ${theme.colors.gradient.main};
     background-attachment: fixed;
     background-position: center;
