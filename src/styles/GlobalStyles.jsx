@@ -40,76 +40,91 @@ const globalStyles = css`
     top: 10%;
     left: 15%;
     background: ${theme.colors.gradient.blobs[0]};
-    animation: floatBlobs 20s ease-in-out infinite alternate;
+    animation: floatBlobs 20s cubic-bezier(0.6, 0.05, 0.1, 0.95) infinite alternate;
+    animation-delay: 0s;
+    will-change: transform;
   }
 
   .blob2 {
     top: 50%;
     left: 60%;
     background: ${theme.colors.gradient.blobs[1]};
-    animation: floatBlobs 20s ease-in-out infinite alternate;
+    animation: floatBlobs 20s cubic-bezier(0.6, 0.05, 0.1, 0.95) infinite alternate;
+    animation-delay: 3s;
+    will-change: transform;
   }
 
   .blob3 {
     top: 70%;
     left: 25%;
     background: ${theme.colors.gradient.blobs[2]};
-    animation: floatBlobs 20s ease-in-out infinite alternate;
+    animation: floatBlobs 20s cubic-bezier(0.6, 0.05, 0.1, 0.95) infinite alternate;
+    animation-delay: 5s;
+    will-change: transform;
   }
 
   .blob4 {
     top: 30%;
     left: 75%;
     background: ${theme.colors.gradient.blobs[3]};
-    animation: floatBlobs 20s ease-in-out infinite alternate;
+    animation: floatBlobs 20s cubic-bezier(0.6, 0.05, 0.1, 0.95) infinite alternate;
+    animation-delay: 2s;
+    will-change: transform;
   }
 
   .blob5 {
     top: 80%;
     left: 80%;
     background: ${theme.colors.gradient.blobs[4]};
-    animation: floatBlobAlt 25s ease-in-out infinite alternate;
+    animation: floatBlobAlt 25s cubic-bezier(0.6, 0.05, 0.1, 0.95) infinite alternate;
+    animation-delay: 4s;
+    will-change: transform;
   }
 
   .blob6 {
     top: 20%;
     left: 5%;
     background: ${theme.colors.gradient.blobs[5]};
-    animation: floatBlobAlt2 18s ease-in-out infinite alternate;
+    animation: floatBlobAlt2 18s cubic-bezier(0.6, 0.05, 0.1, 0.95) infinite alternate;
+    animation-delay: 1s;
+    will-change: transform;
   }
 
   .blob7 {
     top: 40%;
     left: 45%;
     background: ${theme.colors.gradient.blobs[6]};
-    animation: floatBlobAlt3 22s ease-in-out infinite alternate;
+    animation: floatBlobAlt3 22s cubic-bezier(0.6, 0.05, 0.1, 0.95) infinite alternate;
+    animation-delay: 6s;
+    will-change: transform;
   }
 
 
   /* === Blob Animations === */
   @keyframes floatBlobs {
     0%   { transform: translate(0, 0) scale(1); }
-    50%  { transform: translate(-20px, 30px) scale(1.5); }
-    100% { transform: translate(20px, -30px) scale(1); }
+    50%  { transform: translate(-80px, 100px) scale(2.2); }
+    100% { transform: translate(80px, -100px) scale(1); }
   }
 
   @keyframes floatBlobAlt {
     0%   { transform: translate(0, 0) scale(1); }
-    50%  { transform: translate(40px, -20px) scale(1.15); }
-    100% { transform: translate(-30px, 30px) scale(1); }
+    50%  { transform: translate(120px, -80px) scale(1.6); }
+    100% { transform: translate(-100px, 100px) scale(1); }
   }
 
   @keyframes floatBlobAlt2 {
     0%   { transform: translate(0, 0) scale(1); }
-    50%  { transform: translate(-50px, 20px) scale(1.05); }
-    100% { transform: translate(30px, -40px) scale(1); }
+    50%  { transform: translate(-140px, 100px) scale(1.3); }
+    100% { transform: translate(100px, -120px) scale(1); }
   }
 
   @keyframes floatBlobAlt3 {
     0%   { transform: translate(0, 0) scale(1); }
-    50%  { transform: translate(20px, 20px) scale(1.2); }
-    100% { transform: translate(-40px, -30px) scale(1); }
+    50%  { transform: translate(100px, 120px) scale(1.8); }
+    100% { transform: translate(-120px, -100px) scale(1); }
   }
+
 
 
   /* === HTML and Body Styles === */

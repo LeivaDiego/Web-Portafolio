@@ -5,12 +5,12 @@ export const theme = {
   // This section defines the color palette used throughout the application.
   colors: {
     // Main Colors
-    primary: '#043780',
+    primary: '#3A3896',
     secondary: '#020764',
     accent: '#0ECCED',
     
     // Text Colors
-    textLight: '#FFFFFF',
+    textLight: '#DBFDFF',
     textDark: '#030812',
     
     // Glassmorphism Colors
@@ -23,8 +23,16 @@ export const theme = {
 
     // Gradient Colors
     gradient: {
-      main: 'linear-gradient(to right, #2A2D3E 0%, #454964 50%, #2A2D3E 100%)',
-      blobs: ['#0ECCED', '#043780', '#F72585', '#7209B7','#3A0CA3', '#4361EE', '#4CC9F0'],
+      main: 'linear-gradient(to right, #2A2D3E 0%, #454964 50%,rgb(42, 45, 62) 100%)',
+      blobs: [
+        '#025EC4',
+        '#0ECCED',
+        '#044A80',
+        '#022364',
+        '#56E1E9',
+        '#5B58EB',
+        '#430E9E'
+      ],
     },
 
     // Overlay shades
