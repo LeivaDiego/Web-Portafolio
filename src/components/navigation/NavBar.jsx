@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { FaHome, FaProjectDiagram, FaTools, FaEnvelope, FaBars, FaTimes } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
 
-// --- Desktop Nav (top)
+// --- Full Navigation (desktop) ---
 const FullNav = styled(motion.nav)`
   position: fixed;
   top: 0;
@@ -50,7 +50,7 @@ const NavItem = styled.a`
   }
 `
 
-// --- Desktop Nav (scroll)
+// --- Centered Navigation (desktop, scroll) ---
 const CenteredNav = styled(motion.nav)`
   position: fixed;
   top: 1rem;
@@ -72,7 +72,7 @@ const CenteredNav = styled(motion.nav)`
   }
 `
 
-// --- Mobile Top Bar
+// --- Mobile Top Bar (when at top) ---
 const MobileBarTop = styled.div`
   position: fixed;
   top: 0;
@@ -90,7 +90,7 @@ const MobileBarTop = styled.div`
   }
 `
 
-// --- Mobile Sticky Button (on scroll)
+// --- Mobile Sticky Button (on scroll) ---
 const MobileStickyButton = styled.button`
   position: fixed;
   top: 1rem;
@@ -118,12 +118,11 @@ const Overlay = styled(motion.div)`
   background: ${({ theme }) => theme.colors.primary};
   z-index: 1000;
   box-shadow: -2px 0 10px ${({ theme }) => theme.colors.overlay.dark};
-  padding: 4.5rem 2rem 2rem; /* 🔧 Aumentamos el padding-top */
+  padding: 4.5rem 2rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 `
-
 
 const MobileLink = styled.a`
   display: flex;
@@ -137,6 +136,7 @@ const MobileLink = styled.a`
     color: ${({ theme }) => theme.colors.accent};
   }
 `
+
 const HamburgerButton = styled.button`
   font-size: 1.5rem;
   color: ${({ theme }) => theme.colors.accent};
@@ -155,12 +155,14 @@ const Backdrop = styled(motion.div)`
   z-index: 999;
 `
 
-
+// --- Main NavBar Component ---
 const NavBar = () => {
+  // State management
   const [atTop, setAtTop] = useState(true)
   const [menuOpen, setMenuOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
 
+  // Navigation links
   const navLinks = [
     { href: '#home', icon: <FaHome />, label: 'Inicio' },
     { href: '#projects', icon: <FaProjectDiagram />, label: 'Proyectos' },
@@ -168,7 +170,7 @@ const NavBar = () => {
     { href: '#contact', icon: <FaEnvelope />, label: 'Contacto' },
   ]
 
-  // Detectar scroll y cerrar menú si es necesario
+  // Detect scroll position and mobile view
   useEffect(() => {
     const handleScroll = () => {
       setAtTop(window.scrollY < 100)

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 
+// --- Home section styles using Emotion ---
 const Section = styled.section`
   display: flex;
   justify-content: center;
@@ -13,6 +14,7 @@ const Section = styled.section`
   overflow-x: hidden;
 `
 
+// Card container for the home section
 const Card = styled(motion.div)`
   background: ${({ theme }) => theme.colors.glass.background};
   padding: 2rem;
@@ -80,16 +82,19 @@ const Icons = styled(motion.div)`
   }
 `
 
+// Animation variants for icons
 const iconVariants = {
   initial: { scale: 1 },
   hover: { scale: 1.3, rotate: 5 },
 }
 
+// Home section component that displays a greeting, role, description, and social icons
 const Home = () => {
   const fullText = '¡Hola! Soy Diego Leiva'
   const [typedText, setTypedText] = useState('')
   const [showRest, setShowRest] = useState(false)
 
+  // Effect to type out the greeting text character by character
   useEffect(() => {
     let index = 0
     let isMounted = true
@@ -113,6 +118,7 @@ const Home = () => {
   }, [fullText])
 
   return (
+    // Render the home section with animations and content
     <Section id="home">
       <Card
         initial={{ opacity: 0, y: 40 }}

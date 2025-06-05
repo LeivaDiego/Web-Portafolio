@@ -6,6 +6,7 @@ import bmoPreview from '../../assets/bmo-preview.png';
 import memoryPreview from '../../assets/memory-preview.png';
 import calcPreview from '../../assets/calc-preview.png';
 
+// --- Projects section styles using Emotion ---
 const Section = styled.section`
   padding: 4rem 2rem;
   color: ${({ theme }) => theme.colors.textLight};
@@ -17,6 +18,7 @@ const Title = styled.h2`
   text-align: center;
 `
 
+// Container for the project cards
 const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -25,6 +27,7 @@ const Container = styled.div`
   margin: 0 auto;
 `
 
+// Card component for each project
 const Card = styled(motion.div)`
   background: ${({ theme }) => theme.colors.glass.background};
   border-radius: 1rem;
@@ -65,6 +68,7 @@ const Tags = styled.div`
   margin-bottom: 1rem;
 `
 
+// Tag component for technologies used
 const Tag = styled.span`
   background: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.accent};
@@ -80,7 +84,7 @@ const Tag = styled.span`
     color: ${({ theme }) => theme.colors.textDark};
   }
 `
-
+// Icon group for GitHub and demo links
 const IconGroup = styled.div`
   display: flex;
   gap: 1.5rem;
@@ -97,7 +101,8 @@ const IconGroup = styled.div`
   }
 `
 
-// 🧠 Datos mejorados con tecnologías + preview
+// Project data array
+// Each project contains title, description, demo link, repo link, image, and technologies used
 const projects = [
   {
     title: 'BMO CSS',
@@ -125,8 +130,11 @@ const projects = [
   },
 ]
 
+
+// Projects component to display the list of projects
 const Projects = () => {
   return (
+    // Rendering the projects section with a title and a grid of project cards
     <Section id="projects">
       <Title>Proyectos</Title>
       <Container>

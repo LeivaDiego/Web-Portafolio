@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
+// Liquid Gradient component with animated blobs
 export const LiquidGradient = () => (
   <div className="liquid-gradient">
     <div className="liquid-blob blob1"></div>

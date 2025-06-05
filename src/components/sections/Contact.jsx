@@ -2,6 +2,7 @@
 import styled from '@emotion/styled'
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 
+// --- Section styles for the contact section ---
 const Section = styled.section`
   padding: 4rem 2rem;
   color: ${({ theme }) => theme.colors.textLight};
@@ -26,6 +27,7 @@ const Links = styled.div`
   margin-top: 1.5rem;
 `
 
+// Styled link for contact options
 const ContactLink = styled.a`
   display: inline-flex;
   align-items: center;
@@ -56,9 +58,10 @@ const ContactLink = styled.a`
   }
 `;
 
-
+// Contact component to display contact information and links
 const Contact = () => {
   return (
+    // Rendering the contact section with links to GitHub, LinkedIn, and Email
     <Section id="contact">
       <Container>
         <Title>Contacto</Title>

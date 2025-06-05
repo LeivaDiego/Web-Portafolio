@@ -1,16 +1,20 @@
+// This file sets global styles for the application, including a liquid gradient background with animated blobs, typography, and scrollbar styles.
+// It uses Emotion's Global component to inject styles into the document head.
 import { Global, css } from '@emotion/react';
 import { theme } from './theme';
 
 const globalStyles = css`
   @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
+  /* === Reset CSS === */
   *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* === Fondo líquido === */
+
+  /* === Liquid Gradient Background === */
   .liquid-gradient {
     position: fixed;
     inset: 0;
@@ -18,7 +22,8 @@ const globalStyles = css`
     overflow: hidden;
   }
 
-  /* === Estilos base para cada blob === */
+
+  /* === Liquid Blob Styles === */
   .liquid-blob {
     position: absolute;
     width: 400px;
@@ -29,7 +34,8 @@ const globalStyles = css`
     mix-blend-mode: screen;
   }
 
-  /* === Blobs con posición y animación === */
+
+  /* === Blobs === */
   .blob1 {
     top: 10%;
     left: 15%;
@@ -79,7 +85,8 @@ const globalStyles = css`
     animation: floatBlobAlt3 22s ease-in-out infinite alternate;
   }
 
-  /* === Animaciones === */
+
+  /* === Blob Animations === */
   @keyframes floatBlobs {
     0%   { transform: translate(0, 0) scale(1); }
     50%  { transform: translate(-20px, 30px) scale(1.5); }
@@ -105,7 +112,7 @@ const globalStyles = css`
   }
 
 
-
+  /* === HTML and Body Styles === */
   html {
     scroll-behavior: smooth;
     font-size: 16px;
@@ -129,6 +136,7 @@ const globalStyles = css`
     -moz-osx-font-smoothing: grayscale;
   }
 
+  /* === Root Styles === */
   #root {
     min-height: 100vh;
     width: 100%;
@@ -136,17 +144,19 @@ const globalStyles = css`
     flex-direction: column;
   }
 
+  /* === Typography Styles === */
   h1, h2, h3, h4, h5, h6 {
     font-family: ${theme.fonts.heading};
     font-weight: 600;
     line-height: 1.3;
   }
-
+  
   a {
     color: inherit;
     text-decoration: none;
   }
 
+  /* === Button Styles === */
   button {
     cursor: pointer;
     border: none;
@@ -154,50 +164,18 @@ const globalStyles = css`
     font-family: inherit;
   }
 
+  /* === Image Styles === */
   img {
     max-width: 100%;
     height: auto;
     display: block;
   }
 
+  /* === Section and Container Styles === */
   section {
     width: 100%;
     position: relative;
     background: transparent;
-  }
-
-  .container {
-    width: min(90%, 1200px);
-    margin-inline: auto;
-    padding-inline: ${theme.spacing.md};
-    position: relative;
-  }
-
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  ::-webkit-scrollbar-track {
-    background: ${theme.colors.glass.background};
-  }
-  ::-webkit-scrollbar-thumb {
-    background: ${theme.colors.glass.card};
-    border-radius: 5px;
-    border: 2px solid ${theme.colors.glass.border};
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: ${theme.colors.accent};
-  }
-
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
   }
 
   section h2 {
@@ -218,6 +196,42 @@ const globalStyles = css`
     border-radius: 4px;
   }
 
+  .container {
+    width: min(90%, 1200px);
+    margin-inline: auto;
+    padding-inline: ${theme.spacing.md};
+    position: relative;
+  }
+
+  /* === Scrollbar Styles === */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: ${theme.colors.glass.background};
+  }
+  ::-webkit-scrollbar-thumb {
+    background: ${theme.colors.glass.card};
+    border-radius: 5px;
+    border: 2px solid ${theme.colors.glass.border};
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: ${theme.colors.accent};
+  }
+
+  /* === Accessibility Styles === */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
 `;
 
+// Export the GlobalStyles component to be used in the application
 export const GlobalStyles = () => <Global styles={globalStyles} />;

@@ -7,6 +7,7 @@ import {
 } from 'react-icons/fa'
 import { SiMongodb, SiPostgresql } from 'react-icons/si'
 
+// --- Skills section styles using Emotion ---
 const Section = styled.section`
   padding: 4rem 2rem;
   color: ${({ theme }) => theme.colors.textLight};
@@ -26,6 +27,7 @@ const Grid = styled.div`
   margin: 0 auto;
 `
 
+// Card component for each skill category
 const Card = styled(motion.div)`
   background: ${({ theme }) => theme.colors.glass.background};
   border-radius: 1rem;
@@ -52,6 +54,7 @@ const SkillList = styled.div`
   justify-content: center;
 `
 
+// Skill component for each individual skill
 const Skill = styled(motion.div)`
   background: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.textLight};
@@ -76,7 +79,7 @@ const Skill = styled(motion.div)`
   }
 `
 
-// 🎯 Diccionario de íconos por tecnología
+// Icons for each skill dictionary
 const skillIcons = {
   React: <FaReact />,
   JavaScript: <FaJs />,
@@ -90,15 +93,18 @@ const skillIcons = {
   Git: <FaGitAlt />,
 }
 
-// 🧠 Estructura de skills por categoría
+// Sample skills data
 const skillsData = {
   Frontend: ['React', 'JavaScript', 'HTML', 'CSS'],
   Backend: ['Node.js', 'Python', 'MongoDB', 'PostgreSQL'],
   DevOps: ['Docker', 'Git'],
 }
 
+
+// Skills component to display skills section
 const Skills = () => {
   return (
+    // Rendering the skills section with animations
     <Section id="skills">
       <Title>Habilidades</Title>
       <Grid>

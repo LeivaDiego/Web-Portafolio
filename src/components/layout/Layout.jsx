@@ -7,6 +7,7 @@ import Contact from '../sections/Contact'
 import Footer from '../sections/Footer'
 import { LiquidGradient } from '../ui/LiquidGradient'
 
+// Layout component combines all sections and styles for the portfolio
 const Layout = () => {
   return (
     <>

@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import styled from '@emotion/styled'
 
+// --- Footer styles using Emotion ---
 const FooterContainer = styled.footer`
   padding: 2rem;
   text-align: center;
@@ -10,6 +11,7 @@ const FooterContainer = styled.footer`
   border-top: 1px solid ${({ theme }) => theme.colors.accent};
 `
 
+// Footer component displays the current year and copyright information
 const Footer = () => {
   return (
     <FooterContainer>
