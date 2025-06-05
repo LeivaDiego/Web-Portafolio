@@ -9,25 +9,32 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 4rem 2rem;
+  padding: 4rem 1.5rem;
+  overflow-x: hidden;
 `
 
 const Card = styled(motion.div)`
   background: ${({ theme }) => theme.colors.glass.card};
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 1.5rem;
   max-width: 700px;
+  width: 100%;
   text-align: center;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(12px);
+
+  @media (max-width: 480px) {
+    padding: 1.5rem;
+  }
 `
 
 const Heading = styled.h1`
-  font-size: 3rem;
+  font-size: clamp(2rem, 6vw, 3rem);
   margin-bottom: 1rem;
   color: ${({ theme }) => theme.colors.accent};
-  white-space: nowrap;
+  white-space: normal;
   overflow: hidden;
+  word-break: break-word;
 `
 
 const Cursor = styled.span`
@@ -44,7 +51,7 @@ const Cursor = styled.span`
 `
 
 const Role = styled(motion.h2)`
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
   font-weight: 500;
   margin-bottom: 1rem;
 `
@@ -59,7 +66,7 @@ const Description = styled(motion.p)`
 const Icons = styled(motion.div)`
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1.2rem;
   font-size: 1.5rem;
   margin-top: 1rem;
 
@@ -104,8 +111,6 @@ const Home = () => {
       isMounted = false
     }
   }, [fullText])
-
-
 
   return (
     <Section id="home">
