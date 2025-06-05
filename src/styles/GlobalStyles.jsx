@@ -21,6 +21,10 @@ const globalStyles = css`
     font-family: ${theme.fonts.body};
     color: ${theme.colors.text};
     background: ${theme.colors.gradient.main};
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     line-height: 1.6;
     min-height: 100vh;
     width: 100%;

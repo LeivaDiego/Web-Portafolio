@@ -9,7 +9,6 @@ import { SiMongodb, SiPostgresql } from 'react-icons/si'
 
 const Section = styled.section`
   padding: 4rem 2rem;
-  background-color: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.textLight};
 `
 

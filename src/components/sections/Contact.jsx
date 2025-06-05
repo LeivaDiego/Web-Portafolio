@@ -4,7 +4,6 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 
 const Section = styled.section`
   padding: 4rem 2rem;
-  background-color: ${({ theme }) => theme.colors.secondary};
   color: ${({ theme }) => theme.colors.textLight};
 `
 

@@ -8,7 +8,6 @@ import calcPreview from '../../assets/calc-preview.png';
 
 const Section = styled.section`
   padding: 4rem 2rem;
-  background-color: ${({ theme }) => theme.colors.secondary};
   color: ${({ theme }) => theme.colors.textLight};
 `
 
